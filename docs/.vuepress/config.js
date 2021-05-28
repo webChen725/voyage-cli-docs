@@ -5,38 +5,45 @@ module.exports = {
         lineNumbers: true
     },
     themeConfig: {
-        sidebarDepth: 2,
+        sidebarDepth: 3,
         lastUpdated: 'Last Updated',
         nav:[
             { text: 'home', link: '/' },
             {
               text: 'GitHub',
               items: [
-                { text: 'GitHub地址', link: 'https://github.com/OBKoro1' }
+                { text: 'GitHub地址', link: 'https://github.com/webChen725/voyage-cli' }
               ]
             }        
         ],
         sidebar:{
             '/description/': [
-                '/description/',
-                {
-                  title: '快速开始',
-                  children: [
-                    '/description/',
-                    '/description/install',
-                    '/description/start'
-                  ]
-                }
-              ],
-              // docs文件夹下面的algorithm文件夹 这是第二组侧边栏 跟第一组侧边栏没关系
-              '/algorithm/': [
-                '/algorithm/', 
-                {
-                  title: '第二组侧边栏下拉框的标题1',
-                  children: [
-                    '/algorithm/simple/test' 
-                  ]
-                }
+              {
+                title: "快速开始",
+                collapsable: true,
+                children: [
+                  '/description/',
+                  '/description/install',
+                  '/description/start'
+                ]
+              },
+              {
+                title: "指令参数",
+                collapsable: true,
+                children: [
+                  '/description/initParams',
+                  '/description/commitParams',
+                  '/description/publishParams',
+                  '/description/baseParams',
+                ]
+              },
+              {
+                title: "配置文件",
+                collapsable: true,
+                children: [
+                  '/description/configFile'
+                ]
+              }
             ]
         }
     },
