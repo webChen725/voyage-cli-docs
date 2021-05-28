@@ -18,3 +18,4 @@ package-lock.json
 *.njsproj
 *.sln
 *.sw?
+.voyage-cli.js
